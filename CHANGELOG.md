@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/flying-dice/mapbox-toolkit/compare/v1.2.0...v1.3.0) (2022-04-26)
+
+
+### Features
+
+* expose layer id ([af271f9](https://github.com/flying-dice/mapbox-toolkit/commit/af271f985732348552ec429091a2d9296e32f700))
+
 # [1.2.0](https://github.com/flying-dice/mapbox-toolkit/compare/v1.1.2...v1.2.0) (2022-04-26)
 
 
