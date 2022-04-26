@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/flying-dice/mapbox-toolkit/compare/v1.3.0...v1.4.0) (2022-04-26)
+
+
+### Features
+
+* expose layer ids in variable ([e84f3ee](https://github.com/flying-dice/mapbox-toolkit/commit/e84f3eebd928bec6c10792ec57da6903ff4aa837))
+
 # [1.3.0](https://github.com/flying-dice/mapbox-toolkit/compare/v1.2.0...v1.3.0) (2022-04-26)
 
 
