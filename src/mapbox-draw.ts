@@ -5,7 +5,7 @@ import Draw, {
 } from "@mapbox/mapbox-gl-draw";
 import { dissolve, unkinkPolygon } from "@turf/turf";
 
-export class MapboxDrawMap extends Draw {
+export class MapboxDraw extends Draw {
   constructor(options: {
     displayControlsDefault?: boolean | undefined;
     keybindings?: boolean | undefined;
