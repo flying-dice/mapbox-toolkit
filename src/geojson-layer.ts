@@ -2,7 +2,15 @@ import { AnyLayer, GeoJSONSourceOptions, Map } from "mapbox-gl";
 import { v4 } from "uuid";
 
 export class GeoJsonLayer {
+  /**
+   * Main reference ID, used for the source when registering with Mapbox
+   */
   readonly id: string;
+
+  /**
+   * Layer reference IDs for each layer passed in
+   */
+  readonly layerIds: string[];
 
   private map: Map;
 
@@ -11,6 +19,7 @@ export class GeoJsonLayer {
     private readonly layers: Omit<AnyLayer, "id" | "source">[]
   ) {
     this.id = v4();
+    this.layerIds = this.layers.map((_, index) => `${this.id}_${index}`);
   }
 
   addTo(map: Map): this {
@@ -21,7 +30,7 @@ export class GeoJsonLayer {
     });
     for (const [index, layer] of this.layers.entries()) {
       this.map.addLayer({
-        id: `${this.id}_${index}`,
+        id: this.layerIds[index],
         source: this.id,
         ...layer,
       } as AnyLayer);
@@ -32,7 +41,7 @@ export class GeoJsonLayer {
 
   remove() {
     for (const [index, layer] of this.layers.entries()) {
-      this.map.removeLayer(`${this.id}_${index}`);
+      this.map.removeLayer(this.layerIds[index]);
     }
     this.map.removeSource(this.id);
   }
