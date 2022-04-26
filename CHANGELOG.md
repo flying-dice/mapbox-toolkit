@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/flying-dice/mapbox-toolkit/compare/v1.1.2...v1.2.0) (2022-04-26)
+
+
+### Features
+
+* support multiple layers ([0583b49](https://github.com/flying-dice/mapbox-toolkit/commit/0583b49f0e0620c7aafc1db39dfe2542801fabf6))
+
 ## [1.1.2](https://github.com/flying-dice/mapbox-toolkit/compare/v1.1.1...v1.1.2) (2022-04-26)
 
 
