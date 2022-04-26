@@ -30,7 +30,7 @@ export class MapboxMap extends Map {
   }
 
   addMarker(options: MarkerOptions, lngLat?: LngLatLike): Marker {
-    const marker = new Marker();
+    const marker = new Marker(options);
     if (lngLat) {
       marker.setLngLat(lngLat);
     }

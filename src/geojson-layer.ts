@@ -8,7 +8,7 @@ export class GeoJsonLayer {
 
   constructor(
     private readonly source: GeoJSONSourceOptions,
-    private readonly layer: Omit<AnyLayer, "id">
+    private readonly layer: Omit<AnyLayer, "id" | "source">
   ) {
     this.id = v4();
   }
@@ -19,7 +19,11 @@ export class GeoJsonLayer {
       type: "geojson",
       ...this.source,
     });
-    this.map.addLayer({ id: this.id, ...this.layer } as AnyLayer);
+    this.map.addLayer({
+      id: this.id,
+      source: this.id,
+      ...this.layer,
+    } as AnyLayer);
     return this;
   }
 
