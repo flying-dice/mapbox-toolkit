@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/flying-dice/mapbox-toolkit/compare/v1.1.0...v1.1.1) (2022-04-26)
+
+
+### Bug Fixes
+
+* add src for maps ([191a1db](https://github.com/flying-dice/mapbox-toolkit/commit/191a1dba5003f751fef9643270ed064527d2e8bb))
+
 # [1.1.0](https://github.com/flying-dice/mapbox-toolkit/compare/v1.0.0...v1.1.0) (2022-04-26)
 
 
