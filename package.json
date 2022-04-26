@@ -1,6 +1,6 @@
 {
   "name": "@flying-dice/mapbox-toolkit",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Mapbox Toolkit wrapping mapbox-gl and @mapbox/mapbox-gl-draw",
   "license": "MIT",
   "main": "dist/index.js",
