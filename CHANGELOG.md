@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/flying-dice/mapbox-toolkit/compare/v1.1.1...v1.1.2) (2022-04-26)
+
+
+### Bug Fixes
+
+* persist marker, change layer api ([feb2d1a](https://github.com/flying-dice/mapbox-toolkit/commit/feb2d1aeb1078516e9da11a2454de9173ec0919c))
+
 ## [1.1.1](https://github.com/flying-dice/mapbox-toolkit/compare/v1.1.0...v1.1.1) (2022-04-26)
 
 
