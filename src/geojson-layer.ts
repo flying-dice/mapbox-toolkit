@@ -2,7 +2,7 @@ import { AnyLayer, GeoJSONSourceOptions, Map } from "mapbox-gl";
 import { v4 } from "uuid";
 
 export class GeoJsonLayer {
-  private readonly id: string;
+  readonly id: string;
 
   private map: Map;
 
