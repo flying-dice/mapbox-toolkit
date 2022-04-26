@@ -43,7 +43,16 @@ export class MapboxMap extends Map {
     source: GeoJSONSourceOptions,
     layer: Omit<AnyLayer, "id">
   ): GeoJsonLayer {
-    const geoJsonLayer = new GeoJsonLayer(source, layer);
+    const geoJsonLayer = new GeoJsonLayer(source, [layer]);
+    geoJsonLayer.addTo(this);
+    return geoJsonLayer;
+  }
+
+  addGeoJsonLayers(
+    source: GeoJSONSourceOptions,
+    layers: Omit<AnyLayer, "id">[]
+  ): GeoJsonLayer {
+    const geoJsonLayer = new GeoJsonLayer(source, layers);
     geoJsonLayer.addTo(this);
     return geoJsonLayer;
   }

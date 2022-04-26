@@ -8,7 +8,7 @@ export class GeoJsonLayer {
 
   constructor(
     private readonly source: GeoJSONSourceOptions,
-    private readonly layer: Omit<AnyLayer, "id" | "source">
+    private readonly layers: Omit<AnyLayer, "id" | "source">[]
   ) {
     this.id = v4();
   }
@@ -19,16 +19,21 @@ export class GeoJsonLayer {
       type: "geojson",
       ...this.source,
     });
-    this.map.addLayer({
-      id: this.id,
-      source: this.id,
-      ...this.layer,
-    } as AnyLayer);
+    for (const [index, layer] of this.layers.entries()) {
+      this.map.addLayer({
+        id: `${this.id}_${index}`,
+        source: this.id,
+        ...layer,
+      } as AnyLayer);
+    }
+
     return this;
   }
 
   remove() {
-    this.map.removeLayer(this.id);
+    for (const [index, layer] of this.layers.entries()) {
+      this.map.removeLayer(`${this.id}_${index}`);
+    }
     this.map.removeSource(this.id);
   }
 }
